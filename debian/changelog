@@ -1,3 +1,11 @@
+fribidi (0.19.5-5slp2) unstable; urgency=low
+
+  * Fix git info
+  * Git: 165.213.180.234:/git/slp/unmodified/fribidi
+  * Tag: fribidi_0.19.5-5slp2
+
+ -- Jihoon Kim <jihoon48.kim@samsung.com>  Wed, 24 Nov 2010 17:37:39 +0900
+
 fribidi (0.19.5-4slp2) unstable; urgency=low
 
   * Add git tag
