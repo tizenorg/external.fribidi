@@ -1,13 +1,12 @@
 
 Name:       fribidi
 Summary:    Library implementing the Unicode Bidirectional Algorithm
-Version:    0.19.2
+Version:    0.19.5
 Release:    1
 Group:      System/Libraries
 License:    LGPLv2+
 URL:        http://fribidi.org
 Source0:    http://fribidi.org/download/%{name}-%{version}.tar.gz
-Patch0:     donotuse_page_size.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  automake
@@ -36,9 +35,6 @@ FriBidi.
 
 %prep
 %setup -q -n %{name}-%{version}
-
-# donotuse_page_size.patch
-%patch0 -p1
 
 %build
 
@@ -74,3 +70,9 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/*.pc
 %{_mandir}/man3/%{name}_*.gz
 
+%changelog
+* Thu Mar  1 2012 Arron Wang <arron.wang@intel.com> 0.19.5
+- Upgrade to beta code version 0.19.5
+
+* Thu Apr  2 2009 Arjan van de Ven <arjan@linux.intel.com> 0.19.2
+- Initial import
