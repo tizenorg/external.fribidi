@@ -1,13 +1,13 @@
+#sbs-git:slp/unmodified/fribidi fribidi 0.19.5 b36fcb1ced2e1294dd147e36f120f5161e53406d
 
 Name:       fribidi
 Summary:    Library implementing the Unicode Bidirectional Algorithm
-Version:    0.19.2
-Release:    1
+Version: 0.19.5
+Release:    5
 Group:      System/Libraries
 License:    LGPLv2+
 URL:        http://fribidi.org
 Source0:    http://fribidi.org/download/%{name}-%{version}.tar.gz
-Patch0:     donotuse_page_size.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  automake
@@ -37,8 +37,6 @@ FriBidi.
 %prep
 %setup -q -n %{name}-%{version}
 
-# donotuse_page_size.patch
-%patch0 -p1
 
 %build
 
