@@ -1,8 +1,8 @@
 
 Name:       fribidi
 Summary:    Library implementing the Unicode Bidirectional Algorithm
-Version:    0.19.5
-Release:    1
+Version: 0.19.5
+Release:    5
 Group:      System/Libraries
 License:    LGPLv2+
 URL:        http://fribidi.org
@@ -35,6 +35,7 @@ FriBidi.
 
 %prep
 %setup -q -n %{name}-%{version}
+
 
 %build
 
