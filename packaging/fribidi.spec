@@ -7,6 +7,7 @@ Group:      System/Libraries
 License:    LGPLv2+
 URL:        http://fribidi.org
 Source0:    http://fribidi.org/download/%{name}-%{version}.tar.gz
+Source1001: packaging/fribidi.manifest 
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  automake
@@ -38,6 +39,7 @@ FriBidi.
 
 
 %build
+cp %{SOURCE1001} .
 
 %configure --disable-static
 make %{?jobs:-j%jobs}
@@ -58,6 +60,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest fribidi.manifest
 %defattr(-,root,root,-)
 %doc README AUTHORS COPYING ChangeLog THANKS NEWS TODO
 %{_bindir}/fribidi
@@ -65,6 +68,7 @@ rm -rf %{buildroot}
 
 
 %files devel
+%manifest fribidi.manifest
 %defattr(-,root,root,-)
 %{_includedir}/fribidi
 %{_libdir}/libfribidi.so
