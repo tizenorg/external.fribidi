@@ -61,6 +61,7 @@ cp %{_builddir}/%{buildsubdir}/COPYING %{buildroot}/usr/share/license/%{name}
 
 
 %files
+%manifest fribidi.manifest
 %defattr(-,root,root,-)
 %doc README AUTHORS COPYING ChangeLog THANKS NEWS TODO
 %{_bindir}/fribidi
