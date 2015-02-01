@@ -15,6 +15,7 @@ BuildRequires:  autoconf
 BuildRequires:  libtool
 BuildRequires:  pkgconfig
 
+
 %description
 A library to handle bidirectional scripts (for example Hebrew, Arabic),
 so that the display is done in the proper way; while the text data itself
@@ -64,6 +65,7 @@ cp %{_builddir}/%{buildsubdir}/COPYING %{buildroot}/usr/share/license/%{name}
 %doc README AUTHORS COPYING ChangeLog THANKS NEWS TODO
 %{_bindir}/fribidi
 %{_libdir}/libfribidi.so.*
+%manifest %{name}.manifest
 /usr/share/license/%{name}
 
 
