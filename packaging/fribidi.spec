@@ -2,7 +2,7 @@
 
 Name:       fribidi
 Summary:    Library implementing the Unicode Bidirectional Algorithm
-Version: 0.19.5
+Version: 0.19.6
 Release:    5
 Group:      System/Libraries
 License:    LGPLv2+
@@ -40,12 +40,14 @@ FriBidi.
 
 %build
 
-%configure --disable-static
+%reconfigure --disable-static
 make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
 %make_install
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{buildsubdir}/COPYING %{buildroot}/usr/share/license/%{name}
 
 
 
@@ -63,6 +65,8 @@ rm -rf %{buildroot}
 %doc README AUTHORS COPYING ChangeLog THANKS NEWS TODO
 %{_bindir}/fribidi
 %{_libdir}/libfribidi.so.*
+%manifest %{name}.manifest
+/usr/share/license/%{name}
 
 
 %files devel

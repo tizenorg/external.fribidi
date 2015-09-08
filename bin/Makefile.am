@@ -21,5 +21,9 @@ else # !FRIBIDI_CHARSETS
 LDADD += $(top_builddir)/charset/libfribidi-char-sets.la
 endif # !FRIBIDI_CHARSETS
 
+### TIZEN_ONLY(20150424): Apply ASLR to executable files.
+AM_LDFLAGS = -pie
+AM_CPPFLAGS += -fPIE
+
 $(top_builddir)/lib/libfribidi.la:
 	cd $(top_builddir)/lib && $(MAKE) $(AM_MAKEFLAGS) libfribidi.la
