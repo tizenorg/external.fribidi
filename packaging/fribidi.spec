@@ -5,7 +5,7 @@ Summary:    Library implementing the Unicode Bidirectional Algorithm
 Version: 0.19.6
 Release:    5
 Group:      System/Libraries
-License:    LGPLv2+
+License:    LGPL-2.1+
 URL:        http://fribidi.org
 Source0:    http://fribidi.org/download/%{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
